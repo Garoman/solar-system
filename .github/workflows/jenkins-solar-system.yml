@@ -33,3 +33,9 @@ jobs:
 
     - name: Unit Testing
       run: npm test
+
+    - name: Archive Test Results
+      uses: actions/upload@v4
+      with:
+        name: Mocha-Test-Result-${{ matrix.nodejs_version }}-${{ matrix.operating_system }}
+        path: test-results.xml
