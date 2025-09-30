@@ -18,7 +18,7 @@ jobs:
       matrix:
         operating_sytem: [ubuntu-latest, macos-latest]
         nodejs-verison: [20, 21, 22]
-    runs-on: ${{ strategy.matrix.operating-system }}
+    runs-on: ${{ strategy.matrix.operating_system }}
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
